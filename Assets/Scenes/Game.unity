@@ -177,6 +177,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   horizontalLimit: 2.6
+  missilePrefab: {fileID: 1622914276765244, guid: 42b42519c7b286e4e96b519236d5885a,
+    type: 2}
 --- !u!212 &136743189
 SpriteRenderer:
   m_ObjectHideFlags: 0
