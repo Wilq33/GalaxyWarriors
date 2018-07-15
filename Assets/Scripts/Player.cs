@@ -10,8 +10,9 @@ public class Player : MonoBehaviour
     public float firingSpeed = 3f;
     public float firingCooldownDuration = 1f;
     public GameObject missilePrefab;
+    public GameObject explosionPrefab;
 
-    
+
     private float CooldownTimer;
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class Player : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
-        //Fire missiles
+        //Firing missiles
 
         CooldownTimer -= Time.deltaTime;
 
@@ -54,7 +55,23 @@ public class Player : MonoBehaviour
                 );
             Destroy(missileInstance, 2f);
 
+
         }
 
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D otherCollider)
+    {
+        if (otherCollider.tag == "EnemyMissile")
+        {
+            GameObject explosionInstance = Instantiate(explosionPrefab);
+            explosionInstance.transform.SetParent(transform.parent);
+            explosionInstance.transform.position = transform.position;
+
+            Destroy(explosionInstance, 1.5f);
+            Destroy(gameObject);
+            Destroy(otherCollider.gameObject);
+        }
     }
 }

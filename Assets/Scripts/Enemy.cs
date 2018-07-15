@@ -2,22 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
 
     public GameObject explosionPrefab;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     //Colliding with missiles
-    private void OnTriggerEnter2D(Collider2D otherCollider)
+    void OnTriggerEnter2D(Collider2D otherCollider)
     {
         if (otherCollider.tag == "PlayerMissile")
         {
