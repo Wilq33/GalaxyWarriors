@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public float firingCooldownDuration = 1f;
     public GameObject missilePrefab;
 
-    private bool fired = false;
+    
     private float CooldownTimer;
 
     // Update is called once per frame
