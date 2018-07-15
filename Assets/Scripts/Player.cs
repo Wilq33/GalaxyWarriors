@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
 
     public float speed = 1.8f;
-    public float horizontalLimit = 2.6f;
+    public float horizontalLimit = 2.5f;
     public float firingSpeed = 3f;
     public float firingCooldownDuration = 1f;
     public GameObject missilePrefab;
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        if (otherCollider.tag == "EnemyMissile")
+        if (otherCollider.tag == "EnemyMissile" || otherCollider.tag == "Enemy")
         {
             GameObject explosionInstance = Instantiate(explosionPrefab);
             explosionInstance.transform.SetParent(transform.parent);

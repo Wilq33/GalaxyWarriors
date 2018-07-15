@@ -800,6 +800,10 @@ MonoBehaviour:
   shootingSpeed: 2
   enemyMissilePrefab: {fileID: 1622914276765244, guid: cf1e55b5aab442448b5ac17bc8a8f275,
     type: 2}
+  enemyContainer: {fileID: 2125238184}
+  movingInterval: 0.5
+  movingDistance: 0.1
+  horizontalLimit: 2.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,18 +915,6 @@ Prefab:
     - target: {fileID: 4201714444748592, guid: 2961732b1089b264fa498f5ef05d106a, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4201714444748592, guid: 2961732b1089b264fa498f5ef05d106a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4201714444748592, guid: 2961732b1089b264fa498f5ef05d106a, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4201714444748592, guid: 2961732b1089b264fa498f5ef05d106a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2961732b1089b264fa498f5ef05d106a, type: 2}
